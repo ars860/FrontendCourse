@@ -1,0 +1,362 @@
+body {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 98vh;
+}
+
+.pig-tinder__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: calc(100% - 20px);
+  height: 10vh;
+  min-height: 35px;
+
+  font-size: 8vh;
+  text-align: center;
+}
+
+.pig-tinder__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  width: calc(100% - 60px);
+  height: 70vh;
+  padding: 20px;
+
+  border-radius: 30px;
+
+  animation-fill-mode: forwards;
+}
+
+.pig-tinder__card__age,
+.pig-tinder__card__name {
+  color: white;
+  font-size: 5vh;
+  font-weight: bold;
+  text-shadow: -1px -1px 1px #000, 1px -1px 1px #000, -1px 1px 1px #000, 1px 1px 1px #000;
+}
+
+.pig-tinder__card_1 {
+  background: url('images/Vasya.jpg') no-repeat center center;
+  background-clip: padding-box;
+  background-size: cover;
+}
+
+.pig-tinder__card_2 {
+  visibility: hidden;
+
+  height: 0;
+  padding: 0;
+
+  background: url('images/Alex.jpg') no-repeat center center;
+  background-clip: padding-box;
+  background-size: cover;
+}
+
+.pig-tinder__card_3 {
+  visibility: hidden;
+
+  height: 0;
+  padding: 0;
+
+  background: url('images/Ella.jpg') no-repeat center center;
+  background-clip: padding-box;
+  background-size: cover;
+}
+
+.pig-tinder__card_4 {
+  visibility: hidden;
+
+  height: 0;
+  padding: 0;
+
+  background: url('images/Innokentiy.jpg') no-repeat center center;
+  background-clip: padding-box;
+  background-size: cover;
+}
+
+.pig-tinder__card_last {
+  visibility: hidden;
+  align-items: center;
+
+  justify-content: center;
+
+  height: 0;
+  padding: 0;
+
+  background: url('images/Despair.jpg') no-repeat center center;
+  background-clip: padding-box;
+}
+
+.pig-tinder__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  width: calc(100% - 20px);
+  padding: 10px;
+}
+
+.pig-tinder__buttons__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 80px;
+  height: 80px;
+
+  border: 2px solid black;
+  border-radius: 80px;
+
+  box-shadow: 0 0 10px 1px gray;
+}
+
+.pig-tinder__buttons__button_dislike__svg {
+  fill: #ec0000;
+}
+
+.pig-tinder__buttons__button_like {
+  background: #cb5a7c;
+}
+
+.pig-tinder__buttons__button_like__svg {
+  fill: #fbf7e2;
+}
+
+.pig-tinder__buttons__button__svg {
+  width: 60px;
+  height: 60px;
+}
+
+.hidden {
+  visibility: hidden;
+
+  width: 0;
+  height: 0;
+}
+
+.hidden-input {
+  display: none;
+}
+
+.pig-tinder__buttons_2 {
+  display: none;
+}
+
+.pig-tinder__buttons_3 {
+  display: none;
+}
+
+.pig-tinder__buttons_4 {
+  display: none;
+}
+
+#like_1:checked ~ .pig-tinder__card_1 {
+  animation: like 1s ease-in forwards;
+}
+
+#dislike_1:checked ~ .pig-tinder__card_1 {
+  animation: dislike 1s ease-in forwards;
+}
+
+#super-like_1:checked ~ .pig-tinder__card_1 {
+  animation: super-like 1s ease-in forwards;
+}
+
+#like_1:checked ~ .pig-tinder__card_2,
+#dislike_1:checked ~ .pig-tinder__card_2,
+#super-like_1:checked ~ .pig-tinder__card_2 {
+  animation: appearing 1s ease-in forwards;
+}
+
+#like_1:checked ~ .pig-tinder__buttons_2,
+#dislike_1:checked ~ .pig-tinder__buttons_2,
+#super-like_1:checked ~ .pig-tinder__buttons_2 {
+  display: flex;
+}
+
+#like_1:checked ~ .pig-tinder__buttons_1,
+#dislike_1:checked ~ .pig-tinder__buttons_1,
+#super-like_1:checked ~ .pig-tinder__buttons_1 {
+  display: none;
+}
+
+#like_2:checked ~ .pig-tinder__card_2 {
+  animation: like 1s ease-in forwards;
+}
+
+#dislike_2:checked ~ .pig-tinder__card_2 {
+  animation: dislike 1s ease-in forwards;
+}
+
+#super-like_2:checked ~ .pig-tinder__card_2 {
+  animation: super-like 1s ease-in forwards;
+}
+
+#like_2:checked ~ .pig-tinder__card_3,
+#dislike_2:checked ~ .pig-tinder__card_3,
+#super-like_2:checked ~ .pig-tinder__card_3 {
+  animation: appearing 1s ease-in forwards;
+}
+
+#like_2:checked ~ .pig-tinder__buttons_3,
+#dislike_2:checked ~ .pig-tinder__buttons_3,
+#super-like_2:checked ~ .pig-tinder__buttons_3 {
+  display: flex;
+}
+
+#like_2:checked ~ .pig-tinder__buttons_2,
+#dislike_2:checked ~ .pig-tinder__buttons_2,
+#super-like_2:checked ~ .pig-tinder__buttons_2 {
+  display: none;
+}
+
+#like_3:checked ~ .pig-tinder__card_3 {
+  animation: like 1s ease-in forwards;
+}
+
+#dislike_3:checked ~ .pig-tinder__card_3 {
+  animation: dislike 1s ease-in forwards;
+}
+
+#super-like_3:checked ~ .pig-tinder__card_3 {
+  animation: super-like 1s ease-in forwards;
+}
+
+#like_3:checked ~ .pig-tinder__card_4,
+#dislike_3:checked ~ .pig-tinder__card_4,
+#super-like_3:checked ~ .pig-tinder__card_4 {
+  animation: appearing 1s ease-in forwards;
+}
+
+#like_3:checked ~ .pig-tinder__buttons_4,
+#dislike_3:checked ~ .pig-tinder__buttons_4,
+#super-like_3:checked ~ .pig-tinder__buttons_4 {
+  display: flex;
+}
+
+#like_3:checked ~ .pig-tinder__buttons_3,
+#dislike_3:checked ~ .pig-tinder__buttons_3,
+#super-like_3:checked ~ .pig-tinder__buttons_3 {
+  display: none;
+}
+
+#like_4:checked ~ .pig-tinder__card_4 {
+  animation: like 1s ease-in forwards;
+}
+
+#dislike_4:checked ~ .pig-tinder__card_4 {
+  animation: dislike 1s ease-in forwards;
+}
+
+#super-like_4:checked ~ .pig-tinder__card_4 {
+  animation: super-like 1s ease-in forwards;
+}
+
+#like_4:checked ~ .pig-tinder__card_last,
+#dislike_4:checked ~ .pig-tinder__card_last,
+#super-like_4:checked ~ .pig-tinder__card_last {
+  animation: appearing 1s ease-in forwards;
+}
+
+#like_4:checked ~ .pig-tinder__buttons_4,
+#dislike_4:checked ~ .pig-tinder__buttons_4,
+#super-like_4:checked ~ .pig-tinder__buttons_4 {
+  visibility: hidden;
+}
+
+@keyframes like {
+  from {
+    visibility: visible;
+
+    height: 70vh;
+  }
+  99% {
+    visibility: hidden;
+
+    width: calc(100% - 60px);
+
+    transform: translate(800px, 0) rotate(45deg);
+  }
+  100% {
+    visibility: hidden;
+
+    width: 0;
+    height: 0;
+    padding: 0;
+
+    transform: translate(800px, 0) rotate(45deg);
+  }
+}
+
+@keyframes dislike {
+  from {
+    visibility: visible;
+
+    height: 70vh;
+  }
+  99% {
+    width: calc(100% - 60px);
+
+    transform: translate(-800px, 0) rotate(-45deg);
+  }
+  to {
+    visibility: hidden;
+
+    width: 0;
+    height: 0;
+    padding: 0;
+
+    transform: translate(-800px, 0) rotate(-45deg);
+  }
+}
+
+@keyframes super-like {
+  from {
+    visibility: visible;
+
+    height: 70vh;
+  }
+  99% {
+    width: calc(100% - 60px);
+
+    transform: translate(0, -800px);
+  }
+  to {
+    visibility: hidden;
+
+    width: 0;
+    height: 0;
+    padding: 0;
+
+    transform: translate(0, -800px);
+  }
+}
+
+@keyframes appearing {
+  from {
+    visibility: visible;
+
+    height: 0;
+    padding: 20px;
+  }
+  90% {
+    visibility: visible;
+
+    height: 70vh;
+    padding: 20px;
+  }
+  to {
+    visibility: visible;
+
+    height: 70vh;
+    padding: 20px;
+  }
+}

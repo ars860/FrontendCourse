@@ -1,0 +1,416 @@
+@keyframes spin {
+  to {
+    transform: rotate(-1turn);
+  }
+}
+
+@keyframes spin-joint {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes train-movement {
+  from {
+    transform: translateX(500px);
+  }
+  20% {
+    transform: translateX(-300px);
+  }
+  90% {
+    transform: rotate(6deg) translateY(-150px);
+  }
+  to {
+    transform: rotate(6deg) translateX(-1000px) translateY(-150px);
+  }
+}
+
+@keyframes compartment-1-destruction {
+  from {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(0);
+  }
+  to {
+    transform: rotate(15deg) translateX(20px);
+  }
+}
+
+@keyframes compartment-2-destruction {
+  from {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(0);
+  }
+  to {
+    transform: rotate(-25deg) translateX(20px);
+  }
+}
+
+@keyframes compartment-3-destruction {
+  from {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(0);
+  }
+  to {
+    transform: rotate(30deg) translateX(30px);
+  }
+}
+
+@keyframes wheel-4-destruction {
+  from {
+    transform: rotate(0);
+  }
+  30% {
+    transform: rotate(2turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes wheel-4-flying-away {
+  from {
+    transform: rotate(0);
+  }
+  20% {
+    transform: rotate(0);
+  }
+  to {
+    transform: translateY(8px) translateX(-12px);
+  }
+}
+
+@keyframes wheel-5-flying-away {
+  from {
+    transform: rotate(0);
+  }
+  20% {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(40deg) translateY(11px) translateX(20px);
+  }
+}
+
+@keyframes wheel-6-flying-away {
+  from {
+    transform: rotate(0);
+  }
+  20% {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(40deg) translateY(-5px) translateX(15px);
+  }
+}
+
+@keyframes wheel-7-flying-away {
+  from {
+    transform: rotate(0);
+  }
+  20% {
+    transform: rotate(0);
+  }
+  to {
+    transform: translateY(-11px) translateX(20px);
+  }
+}
+
+@keyframes wheel-9-flying-away {
+  from {
+    transform: rotate(0);
+  }
+  20% {
+    transform: rotate(0);
+  }
+  to {
+    transform: translateY(20px) translateX(10px);
+  }
+}
+
+@keyframes green-light {
+  from {
+    transform: scale(0.1, 0.1);
+
+    box-shadow: none;
+  }
+  10% {
+    transform: scale(0.1, 0.1);
+
+    box-shadow: none;
+  }
+  15% {
+    transform: scale(0.4, 0.5);
+
+    box-shadow: none;
+  }
+  23% {
+    transform: scale(0.5, 0.6) rotate(-10deg);
+
+    box-shadow: 0 0 100px 100px lawngreen;
+  }
+
+  60% {
+    box-shadow: none;
+  }
+  to {
+    box-shadow: none;
+  }
+}
+
+@keyframes ufo {
+  from {
+    right: 20rem;
+  }
+  to {
+    right: 500rem;
+  }
+}
+
+@keyframes smoke1 {
+  from {
+    transform: rotate(90deg);
+  }
+  to {
+    transform: translateY(-15px) translateX(5px) rotate(60deg) scale(1.5, 1.5);
+
+    opacity: 0;
+  }
+}
+
+@keyframes smoke2 {
+  from {
+    transform: rotate(96deg);
+  }
+  to {
+    transform: translateY(-12px) translateX(4px) rotate(88deg) scale(1.5, 1.5);
+
+    opacity: 0;
+  }
+}
+
+@keyframes smoke3 {
+  from {
+    transform: rotate(80deg);
+  }
+  to {
+    transform: translateY(-29px) translateX(6px) rotate(65deg) scale(1.5, 1.5);
+
+    opacity: 0;
+  }
+}
+
+.wheel-joint {
+  animation: spin-joint 1s linear infinite forwards;
+}
+
+.wheel {
+  animation: spin 1s linear infinite;
+}
+
+.train {
+  z-index: 10;
+
+  animation: train-movement 10s cubic-bezier(0.21, 0.63, 0.36, 1) infinite;
+}
+
+.compartment-one {
+  animation: compartment-1-destruction 5s ease-in infinite alternate;
+}
+
+.compartment-two {
+  animation: compartment-2-destruction 5s ease-in infinite alternate;
+}
+
+.compartment-three {
+  animation: compartment-3-destruction 5s ease-in infinite alternate;
+}
+
+.wheel-box {
+  position: absolute;
+
+  width: 2.8rem;
+  height: 2.8rem;
+}
+
+.wheel-4-box {
+  animation: wheel-4-flying-away 5s ease-in infinite alternate;
+}
+
+.wheel-5-box {
+  animation: wheel-5-flying-away 5s ease-in infinite alternate;
+}
+
+.wheel-6-box {
+  animation: wheel-6-flying-away 5s ease-in infinite alternate;
+}
+
+.wheel-7-box {
+  animation: wheel-7-flying-away 5s ease-in infinite alternate;
+}
+
+.wheel-9-box {
+  animation: wheel-9-flying-away 5s ease-in infinite alternate;
+}
+
+.green-light {
+  position: relative;
+  top: 4rem;
+  left: 0;
+  z-index: 1;
+
+  width: 0;
+  height: 1000px;
+  margin: auto;
+
+  border-radius: 50%;
+
+  animation: green-light 10s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+  transform-origin: top;
+
+  box-shadow: 0 0 1px 1px lawngreen;
+}
+
+.ufo {
+  position: absolute;
+  top: -15rem;
+  right: 40rem;
+  z-index: 2;
+
+  animation: ufo 10s cubic-bezier(0, 0.44, 0.54, -0.63) infinite;
+  transform: rotate(50deg);
+}
+
+.ufo img {
+  position: relative;
+
+  width: 150px;
+  height: auto;
+
+  transform: rotate(-30deg);
+}
+
+.smoke {
+  animation: smoke1 1s linear infinite;
+}
+
+.smoke-2 {
+  animation: smoke2 1.5s linear infinite;
+}
+
+.smoke-3 {
+  animation: smoke3 2s linear infinite;
+}
+
+.smoke-4 {
+  animation: smoke1 1.1s linear infinite;
+}
+
+@keyframes cloud-1-moving {
+  to {
+    transform: scale(0.9, 0.8) translateX(140rem);
+  }
+}
+
+@keyframes cloud-2-moving {
+  to {
+    transform: scale(0.5, 0.4) translateX(140rem);
+  }
+}
+
+@keyframes cloud-3-moving {
+  to {
+    transform: scale(0.3, 0.2) translateX(140rem);
+  }
+}
+
+@keyframes cloud-4-moving {
+  to {
+    transform: scale(0.7, 0.6) translateX(140rem);
+  }
+}
+.cloud-1 {
+  position: absolute;
+  top: 10rem;
+  left: -35rem;
+
+  animation: cloud-1-moving 40s linear infinite;
+  transform: scale(0.9, 0.8);
+}
+
+.cloud-2 {
+  position: absolute;
+  top: 3rem;
+  left: -30rem;
+
+  animation: cloud-2-moving 60s linear infinite;
+  animation-delay: 20s;
+  transform: scale(0.5, 0.4);
+}
+
+.cloud-3 {
+  position: absolute;
+  top: 5rem;
+  left: -20rem;
+
+  animation: cloud-3-moving 70s linear infinite;
+  transform: scale(0.3, 0.2);
+}
+
+.cloud-4 {
+  position: absolute;
+  top: 10rem;
+  left: -39rem;
+
+  animation: cloud-4-moving 50s linear infinite;
+  animation-delay: 30s;
+  transform: scale(0.7, 0.6);
+}
+
+@keyframes green-light-1 {
+  80% {
+    box-shadow: none;
+  }
+  90% {
+    box-shadow: 0 0 100px 50px lawngreen;
+  }
+  95% {
+    box-shadow: none;
+  }
+}
+
+.green-light-1 {
+  position: absolute;
+  top: 22rem;
+  left: 0;
+  z-index: 1;
+
+  height: 2000px;
+
+  animation: green-light-1 10s linear infinite;
+  transform: rotate(-85deg);
+  transform-origin: top;
+}
+
+@keyframes moon-movement {
+  from {
+    top: 200px;
+
+    transform: scale(2, 2);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
+
+.moon {
+  animation: moon-movement 8s ease-out;
+}

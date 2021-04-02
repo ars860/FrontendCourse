@@ -1,0 +1,226 @@
+body {
+  width: 800px;
+  height: 900px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.catogram {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 900px;
+}
+
+.catogram__photo {
+  align-self: center;
+
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.catogram__photo__img {
+  display: block;
+
+  width: 632px;
+  height: 632px;
+
+  transition: 0.5s;
+}
+
+.catogram__bottom-controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.catogram__bottom-controls__filter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.catogram__bottom-controls__filter:hover {
+  cursor: pointer;
+}
+
+.catogram__bottom-controls__filter__name {
+  color: #444444;
+  font-family: Helvetica, serif;
+  font-size: 18px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.catogram__bottom-controls__filter__photo {
+  width: 170px;
+  height: 169px;
+
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.12);
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.catogram__bottom-controls__filter__photo_yalta {
+  filter: sepia(1);
+}
+
+.catogram__bottom-controls__filter__photo_spb {
+  filter: grayscale(1);
+}
+
+.catogram__bottom-controls__filter__photo_ural-summer {
+  filter: hue-rotate(180deg);
+}
+
+.catogram__bottom-controls__arrow__svg {
+  width: 45px;
+  height: 45px;
+}
+
+.catogram__bottom-controls__arrow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  fill: gray;
+}
+
+.catogram__bottom-controls__arrow__svg_left {
+  transform: rotate(90deg);
+}
+
+.catogram__bottom-controls__arrow__svg_right {
+  transform: rotate(-90deg);
+}
+
+.catogram__top-controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.catogram__top-controls__control {
+  display: block;
+
+  width: 48px;
+  height: 48px;
+
+  fill: gray;
+}
+
+.catogram__top-controls__control:hover {
+  cursor: pointer;
+  fill: black;
+}
+
+.catogram__top-controls__control__svg {
+  width: 48px;
+  height: 48px;
+}
+
+.catogram__photo__flip-box__rotate-box,
+.catogram__photo__flip-box,
+.catogram__photo__flip-box__rotate-box__scale-box {
+  transition: 0.5s;
+}
+
+.hidden {
+  display: none;
+}
+
+#flip-input:checked ~ .catogram__photo__flip-box {
+  transform: scale(-1, 1);
+}
+
+#fill-input:checked ~ .catogram__photo__img {
+  width: 520px;
+}
+
+#standard:checked ~ .catogram__photo__img {
+  filter: none;
+}
+
+#spb:checked ~ .catogram__photo__img {
+  filter: grayscale(1);
+}
+
+#yalta:checked ~ .catogram__photo__img {
+  filter: sepia(1);
+}
+
+#ural-summer:checked ~ .catogram__photo__img {
+  filter: hue-rotate(180deg);
+}
+
+.catogram__top-controls__control__rotate {
+  display: none;
+}
+
+#rotate-0:checked
+  ~ .catogram__photo
+  .catogram__photo__flip-box
+  .catogram__photo__flip-box__rotate-box {
+  transform: rotate(0);
+}
+
+#rotate-0:checked ~ .catogram__top-controls .catogram__top-controls__control__rotate_90 {
+  display: block;
+}
+
+#rotate-90:checked
+  ~ .catogram__photo
+  .catogram__photo__flip-box
+  .catogram__photo__flip-box__rotate-box {
+  transform: rotate(90deg);
+}
+
+#rotate-90:checked ~ .catogram__top-controls .catogram__top-controls__control__rotate_180 {
+  display: block;
+}
+
+#rotate-180:checked
+  ~ .catogram__photo
+  .catogram__photo__flip-box
+  .catogram__photo__flip-box__rotate-box {
+  transform: rotate(180deg);
+}
+
+#rotate-180:checked ~ .catogram__top-controls .catogram__top-controls__control__rotate_270 {
+  display: block;
+}
+
+#rotate-270:checked
+  ~ .catogram__photo
+  .catogram__photo__flip-box
+  .catogram__photo__flip-box__rotate-box {
+  transform: rotate(270deg);
+}
+
+#rotate-270:checked ~ .catogram__top-controls .catogram__top-controls__control__rotate_0 {
+  display: block;
+}
+
+.catogram__photo__img_initial {
+  display: none;
+}
+
+#show-init:active ~ .catogram__photo__img_initial {
+  display: block;
+}
+
+#show-init:active ~ .catogram__photo__flip-box {
+  display: none;
+}
+
+#scale-input:checked ~ .catogram__photo__flip-box__rotate-box__scale-box {
+  transform: scale(0.5, 0.5);
+}
+
+.catogram__top-controls__control_logo__svg {
+  fill: url(#gradient);
+}

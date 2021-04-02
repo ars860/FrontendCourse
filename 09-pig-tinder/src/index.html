@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <title>Задача «СвиноТиндер»</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <svg class="hidden">
+      <defs>
+        <radialGradient id="super-like-gradient">
+          <stop offset="10%" stop-color="yellow"/>
+          <stop offset="95%" stop-color="gold"/>
+        </radialGradient>
+      </defs>
+      <symbol id="super-like" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M12 .288l2.833 8.718h9.167l-7.417 5.389 2.833
+          8.718-7.416-5.388-7.417 5.388 2.833-8.718-7.416-5.389h9.167z" fill="url(#super-like-gradient)"/>
+      </symbol>
+      <symbol id="dislike" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666
+           3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/>
+      </symbol>
+      <symbol id="like" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M12 4.419c-2.826-5.695-11.999-4.064-11.999 3.27 0 7.27 9.903 10.938
+          11.999 15.311 2.096-4.373 12-8.041 12-15.311 0-7.327-9.17-8.972-12-3.27z"/>
+      </symbol>
+    </svg>
+    <header class="pig-tinder__header">PigTinder</header>
+    <input class="hidden-input" id="like_1" type="radio" name="pig_1">
+    <input class="hidden-input" id="dislike_1" type="radio" name="pig_1">
+    <input class="hidden-input" id="super-like_1" type="radio" name="pig_1">
+
+    <input class="hidden-input" id="like_2" type="radio" name="pig_2">
+    <input class="hidden-input" id="dislike_2" type="radio" name="pig_2">
+    <input class="hidden-input" id="super-like_2" type="radio" name="pig_2">
+
+    <input class="hidden-input" id="like_3" type="radio" name="pig_3">
+    <input class="hidden-input" id="dislike_3" type="radio" name="pig_3">
+    <input class="hidden-input" id="super-like_3" type="radio" name="pig_3">
+
+    <input class="hidden-input" id="like_4" type="radio" name="pig_4">
+    <input class="hidden-input" id="dislike_4" type="radio" name="pig_4">
+    <input class="hidden-input" id="super-like_4" type="radio" name="pig_4">
+
+    <div class="pig-tinder__card pig-tinder__card_1">
+      <div class="pig-tinder__card__name">Вася</div>
+      <div class="pig-tinder__card__age">20 лет</div>
+    </div>
+
+    <div class="pig-tinder__card pig-tinder__card_2">
+      <div class="pig-tinder__card__name">Саша</div>
+      <div class="pig-tinder__card__age">17 лет</div>
+    </div>
+
+    <div class="pig-tinder__card pig-tinder__card_3">
+      <div class="pig-tinder__card__name">Эллочка</div>
+      <div class="pig-tinder__card__age">18 лет</div>
+    </div>
+
+    <div class="pig-tinder__card pig-tinder__card_4">
+      <div class="pig-tinder__card__name">Иннокентий</div>
+      <div class="pig-tinder__card__age">34 года</div>
+    </div>
+
+    <div class="pig-tinder__card pig-tinder__card_last">
+      <div class="pig-tinder__card__name">No more</div>
+      <div class="pig-tinder__card__age">piggies</div>
+    </div>
+
+    <div class="pig-tinder__buttons pig-tinder__buttons_1">
+      <label for="dislike_1" class="pig-tinder__buttons__button pig-tinder__buttons__button_dislike">
+        <svg class="pig-tinder__buttons__button__svg pig-tinder__buttons__button_dislike__svg">
+          <use xlink:href="#dislike"/>
+        </svg>
+      </label>
+      <label for="super-like_1" class="pig-tinder__buttons__button pig-tinder__buttons__button_super-like">
+        <svg class="pig-tinder__buttons__button__svg pig-tinder__buttons__button_super-like__svg">
+          <use xlink:href="#super-like"/>
+        </svg>
+      </label>
+      <label for="like_1" class="pig-tinder__buttons__button pig-tinder__buttons__button_like">
+        <svg class="pig-tinder__buttons__button__svg pig-tinder__buttons__button_like__svg">
+          <use xlink:href="#like"/>
+        </svg>
+      </label>
+    </div>
+
+    <div class="pig-tinder__buttons pig-tinder__buttons_2">
+      <label for="dislike_2" class="pig-tinder__buttons__button pig-tinder__buttons__button_dislike">
+        <svg class="pig-tinder__buttons__button__svg pig-tinder__buttons__button_dislike__svg">
+          <use xlink:href="#dislike"/>
+        </svg>
+      </label>
+      <label for="super-like_2" class="pig-tinder__buttons__button pig-tinder__buttons__button_super-like">
+        <svg class="pig-tinder__buttons__button__svg pig-tinder__buttons__button_super-like__svg">
+          <use xlink:href="#super-like"/>
+        </svg>
+      </label>
+      <label for="like_2" class="pig-tinder__buttons__button pig-tinder__buttons__button_like">
+        <svg class="pig-tinder__buttons__button__svg pig-tinder__buttons__button_like__svg">
+          <use xlink:href="#like"/>
+        </svg>
+      </label>
+    </div>
+
+    <div class="pig-tinder__buttons pig-tinder__buttons_3">
+      <label for="dislike_3" class="pig-tinder__buttons__button pig-tinder__buttons__button_dislike">
+        <svg class="pig-tinder__buttons__button__svg pig-tinder__buttons__button_dislike__svg">
+          <use xlink:href="#dislike"/>
+        </svg>
+      </label>
+      <label for="super-like_3" class="pig-tinder__buttons__button pig-tinder__buttons__button_super-like">
+        <svg class="pig-tinder__buttons__button__svg pig-tinder__buttons__button_super-like__svg">
+          <use xlink:href="#super-like"/>
+        </svg>
+      </label>
+      <label for="like_3" class="pig-tinder__buttons__button pig-tinder__buttons__button_like">
+        <svg class="pig-tinder__buttons__button__svg pig-tinder__buttons__button_like__svg">
+          <use xlink:href="#like"/>
+        </svg>
+      </label>
+    </div>
+
+    <div class="pig-tinder__buttons pig-tinder__buttons_4">
+      <label for="dislike_4" class="pig-tinder__buttons__button pig-tinder__buttons__button_dislike">
+        <svg class="pig-tinder__buttons__button__svg pig-tinder__buttons__button_dislike__svg">
+          <use xlink:href="#dislike"/>
+        </svg>
+      </label>
+      <label for="super-like_4" class="pig-tinder__buttons__button pig-tinder__buttons__button_super-like">
+        <svg class="pig-tinder__buttons__button__svg pig-tinder__buttons__button_super-like__svg">
+          <use xlink:href="#super-like"/>
+        </svg>
+      </label>
+      <label for="like_4" class="pig-tinder__buttons__button pig-tinder__buttons__button_like">
+        <svg class="pig-tinder__buttons__button__svg pig-tinder__buttons__button_like__svg">
+          <use xlink:href="#like"/>
+        </svg>
+      </label>
+    </div>
+
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>

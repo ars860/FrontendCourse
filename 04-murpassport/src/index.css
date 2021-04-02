@@ -1,0 +1,228 @@
+body {
+  display: grid;
+  grid-gap: 10px;
+  grid-template:
+    '. header header .' 50px
+    '. sidebar content .' 1250px
+    'footer footer footer footer' 50px
+    / 1fr 100px 500px 2fr;
+
+  font-family: PT-SansNarrow, sans-serif;
+  font-size: 16px;
+}
+
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  grid-area: sidebar;
+
+  border: 1px black solid;
+}
+
+.sidebar .menu {
+  height: 50px;
+  margin: 0;
+
+  border-bottom: 1px black solid;
+}
+
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  height: 250px;
+  margin: 0;
+  padding: 0;
+}
+
+.focusable:focus {
+  border: none;
+
+  background-color: gold;
+  box-shadow: 0 0 0 3px gold, 0 0 0 5px black;
+  outline: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.sidebar li {
+  height: 50px;
+}
+
+li a {
+  width: 100%;
+  height: 50px;
+
+  color: black;
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 50px;
+
+  border-bottom: 1px solid black;
+
+  background-color: white;
+}
+
+header h1::first-letter {
+  color: red;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  grid-area: content;
+}
+
+.card {
+  width: 400px;
+
+  border: 1px solid black;
+}
+
+.card .photo {
+  display: block;
+
+  width: 100%;
+  height: 300px;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+}
+
+.main-info__description__name::before {
+  content: 'Имя: ';
+}
+
+.main-info__description__age::before {
+  content: 'Возраст: ';
+}
+
+.main-info__description__breed::before {
+  content: 'Порода: ';
+}
+
+.main-info__description__status::before {
+  content: 'Статус: ';
+}
+
+.vaccinations ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 65px;
+}
+
+.vaccinations li {
+  list-style-type: decimal;
+}
+
+.main-info__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 85px;
+}
+
+.description__text {
+  padding: 0 1rem 1rem 1rem;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  grid-area: footer;
+
+  width: 100%;
+
+  border-top: 1px solid black;
+}
+
+footer a {
+  color: #4c4cd8;
+  text-decoration: none;
+}
+
+.footer__ooo {
+  margin-left: auto;
+}
+
+.footer__ooo::before {
+  content: '© 2019 OOO «';
+}
+
+.footer__ooo::after {
+  content: '»';
+}
+
+.footer__email::before {
+  content: 'email: «';
+}
+
+.footer__email::after {
+  content: '»';
+}
+
+.comment__form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+
+  width: 90%;
+  height: 240px;
+  padding: 0 1rem 1rem 1rem;
+}
+
+.comment__form textarea {
+  height: 100px;
+  padding: 5px;
+
+  border: 1px black solid;
+
+  resize: none;
+}
+
+.email {
+  padding: 5px;
+
+  border: 1px black solid;
+}
+
+.comment__form textarea:focus,
+.comment__form .email:focus {
+  background: white;
+}
+
+.comment__form__button {
+  height: 25px;
+
+  border: 1px black solid;
+
+  background: #edffe5;
+}
+
+.comment__form__button:focus {
+  background: #edffe5;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>03-pimp-your-cat</title>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+  <body>
+    <input class="hide_popup" id="hide_popup" type="checkbox">
+    <form class="cat_buying_form">
+      <div class="header">
+        Купи кота!
+      </div>
+      <div class="description">
+        Смотри какой он классный!<br>
+        "Зачем мне этот кот?"<br>
+        Все так говорят, а ты купи кота!<br>
+      </div>
+      <div class="money">
+        Зоплотить:
+        <input class="money_input input" type="number" placeholder="300кк">
+        На чай:
+        <input class="money_input input" type="number" placeholder="300кк">
+      </div>
+      <div class="radio_buttons">
+        <input id="aba" type="radio" name="radio">
+        <label class="radio radio_left" for="aba">
+          кнопки
+        </label>
+        <input id="caba" type="radio" name="radio">
+        <label class="radio" for="caba">
+          без
+        </label>
+        <input id="baba" type="radio" name="radio">
+        <label class="radio radio_right" for="baba">
+          смысла
+        </label>
+      </div>
+      <div class="email">
+        <input class="email_input input" type="email" placeholder="Email (не ваш)">
+      </div>
+      <div class="spam">
+        Установить Яндекс браузер
+        <input id="spam" type="checkbox" checked>
+        <label class="custom_spam" for="spam">
+        </label>
+      </div>
+      <div class="confirm">
+        <input id="confirm" type="button">
+        <label class="confirm_button" for="confirm">
+          Продать себя в рабство
+        </label>
+      </div>
+      <div class="some_images">
+        <svg class="top_rectangle">
+          <rect></rect>
+        </svg>
+        <img class="photo" src="images/Kvazimodo.jpg" alt="Кот">
+        <svg class="bottom_rectangle">
+          <rect></rect>
+        </svg>
+      </div>
+      <label class="exit_button" for="hide_popup">
+        <img src="images/exit.png" alt="exit">
+      </label>
+    </form>
+  </body>
+</html>

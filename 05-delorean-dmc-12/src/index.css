@@ -1,0 +1,311 @@
+@font-face {
+  font-family: 'mastodonbold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/mastodon-webfont.woff2') format('woff2'),
+    url('fonts/mastodon-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'molot';
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/Molot.otf') format('opentype');
+}
+
+body {
+  display: grid;
+  grid-template:
+    '.' 25px
+    'header' 250px
+    'main' 1000px
+    / 1500px;
+
+  width: 1500px;
+  margin-right: auto;
+  margin-left: auto;
+
+  background: url('https://upload.wikimedia.org/wikipedia/commons/c/cf/Old_paper7.jpg');
+  font-family: monospace;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  grid-area: header;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.top-flex-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  height: 210px;
+  margin-bottom: 10px;
+}
+
+.proletarians-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.proletarians-title .proletarians {
+  align-self: flex-end;
+
+  margin-right: 10px;
+
+  border-bottom: black 1px solid;
+
+  font-family: 'Roboto Thin', serif;
+  font-size: 14px;
+  letter-spacing: 3px;
+}
+
+.proletarians-title .title {
+  font-family: mastodonbold, serif;
+  font-size: 200px;
+  letter-spacing: 5px;
+  line-height: 170px;
+}
+
+.department-timetable {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.department-timetable .department {
+  font-family: molot, serif;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+}
+
+.department-timetable .timetable {
+  align-self: center;
+
+  width: 80%;
+  padding: 10px;
+
+  border: 1px solid black;
+
+  word-spacing: 10px;
+}
+
+.department-timetable .timetable span {
+  font-weight: bold;
+}
+
+.date {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 140px;
+
+  border: 1px black solid;
+
+  text-align: center;
+}
+
+.date::before {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  bottom: 1px;
+  left: 1px;
+
+  display: block;
+
+  border: 1px solid black;
+
+  content: '';
+}
+
+.date .date__year {
+  font-weight: bold;
+}
+
+.date .date__day {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.date .date__star {
+  font-size: 20px;
+}
+
+.border-cost {
+  display: flex;
+  flex-direction: row;
+}
+
+.border-cost .border {
+  flex-grow: 1;
+
+  height: 20px;
+
+  background: black;
+}
+
+.border-cost .cost {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  width: 120px;
+}
+
+main {
+  display: grid;
+  grid-area: main;
+  grid-template:
+    'a b b c' 300px
+    'e b b c' 300px
+    'f f f c' 1fr
+    / 1fr 1fr 1fr 1fr;
+}
+
+.catchword {
+  width: 400px;
+
+  border-bottom: 1px solid black;
+}
+
+.catchword h3 {
+  grid-area: a;
+
+  margin: 0;
+  padding: 10px;
+
+  font-size: 35px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.spaced {
+  font-size: 50px;
+  letter-spacing: 20px;
+}
+
+.catchword h3 .heroes {
+  float: left;
+
+  width: 200px;
+  height: 100px;
+  margin-top: 10px;
+  padding: 10px;
+
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.lorem-ipsum {
+  grid-area: b;
+
+  padding: 10px;
+
+  border-left: 1px solid black;
+
+  column-count: 3;
+  font-size: 15px;
+}
+
+main .paragraph {
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+  text-indent: 20px;
+}
+
+main .paragraph::first-letter {
+  font-size: 150%;
+}
+
+.lorem-ipsum h3 {
+  float: left;
+
+  font-size: 30px;
+  text-orientation: upright;
+  writing-mode: vertical-lr;
+}
+
+main .quote {
+  padding: 10px;
+
+  border: 3px solid black;
+}
+
+.sell-garage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  grid-area: e;
+
+  text-align: center;
+}
+
+.sell-garage h3 {
+  margin: 0;
+
+  font-family: mastodonbold, serif;
+  font-size: 60px;
+  text-decoration: underline;
+}
+
+.sell-garage .number {
+  font-size: 20px;
+}
+
+.bred {
+  grid-area: c;
+
+  padding: 10px;
+
+  border-left: 1px solid black;
+
+  font-size: 15px;
+}
+
+.text-with-photos {
+  grid-area: f;
+
+  border-top: 1px solid black;
+
+  column-count: 3;
+}
+
+.text-with-photos .photo {
+  display: block;
+
+  width: 300px;
+  height: 200px;
+  margin-right: auto;
+  margin-left: auto;
+
+  filter: grayscale(100%);
+}
+
+.text-with-photos h3 {
+  /*margin: 0;*/
+  width: 300px;
+
+  font-family: molot, serif;
+  font-size: 25px;
+  letter-spacing: 10px;
+  /*float: left;*/
+}
+
+.cool-font {
+  font-family: mastodonbold, serif;
+  font-size: 20px;
+}

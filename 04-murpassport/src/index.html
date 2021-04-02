@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+ <html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>04-murpassport</title>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+  <body>
+    <header class="centered">
+      <h1>Мурпаспорт</h1>
+    </header>
+    <nav class="sidebar">
+      <h2 class="menu centered">Меню</h2>
+      <ul>
+        <li><a class="centered focusable" href="#main-info">Данные</a></li>
+        <li><a class="centered focusable" href="#vaccinations">Прививки</a></li>
+        <li><a class="centered focusable" href="#description">Описание</a></li>
+        <li><a class="centered focusable" href="#comment">Связь</a></li>
+      </ul>
+    </nav>
+    <main class="cards">
+      <section id="main-info" class="card main-info">
+        <div class="card__flex-container">
+          <h3 class="centered ">Данные:</h3>
+          <a class="photo focusable" href="#">
+            <img src="images/Kvazimodo.jpg" alt="Кот Квазимодо, белый, мягкий и пушистый">
+          </a>
+          <ul class="main-info__description">
+            <li>
+              <a class="main-info__description__name focusable" href="#">
+                Квазимодо
+              </a>
+            </li>
+            <li class="main-info__description__age">
+              100 лет
+            </li>
+            <li class="main-info__description__breed">
+              Точно не известна
+            </li>
+            <li class="main-info__description__status">
+              По прежнему ничего не понимает
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="vaccinations" class="card vaccinations">
+        <h3 class="centered">Прививки:</h3>
+        <ul>
+          <li>От всех известных болезней</li>
+          <li>От всех неизвестных болезней</li>
+          <li>Госпади, все равно не помогают</li>
+        </ul>
+      </section>
+      <section id="description" class="card description">
+        <h3 class="centered ">Описание:</h3>
+        <div class="description__text ">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec sapien enim.
+          Sed eget diam convallis, sodales ante in, consectetur ante.
+          Praesent id cursus diam, nec malesuada augue. Nullam non dolor lorem.
+          Morbi quis odio nec sem posuere scelerisque. Nam vitae ipsum placerat, tristique purus
+        </div>
+      </section>
+      <section id="comment" class="card comment">
+        <h3 class="centered ">Обратная связь:</h3>
+        <form class="comment__form">
+          <label class="comment__form__label centered" for="text">Оставьте комментарий:</label>
+          <textarea class="focusable" placeholder="Напишите что-нибудь:" id="text"></textarea>
+          <label class="comment__form__label centered" for="email">Ваша почта:</label>
+          <input class="email focusable" placeholder="email: " id="email" type="email">
+          <button class="comment__form__button focusable" type="submit">Отправить</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div class="footer__email centered">
+        <a href="#" class="footer__email__a focusable">aba@caba</a>
+      </div>
+      <div class="footer__ooo centered">
+        <a href="#" class="footer__ooo__a focusable">Мурпаспорт</a>
+      </div>
+    </footer>
+    <script type="text/javascript" src="./simulation.js"></script>
+  </body>
+</html>
